@@ -1,0 +1,190 @@
+/* 🔹 MENU MOBILE (ESCONDIDO POR PADRÃO) */
+@media screen and (max-width: 1170px) {
+    #nav_list {
+        display: none; /* Esconde o menu principal em telas menores */
+    }
+
+    #mobile_btn {
+        display: block; /* Exibe o botão do menu hambúrguer */
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        z-index: 10; /* Garantir que o botão do menu fique acima do conteúdo */
+    }
+
+    #mobile_menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        background-color: #4497D8;
+        width: 200px;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 5; /* Menor z-index para o menu */
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    }
+
+    #home {
+        flex-direction: column; /* Coloca os itens um abaixo do outro */
+        padding: 0 5%; /* Ajusta o padding */
+        align-items: center; /* Alinha o conteúdo */
+    }
+
+    #cta {
+        width: 100%; /* Ajusta a largura do texto */
+        margin-top: 0; /* Remove o espaçamento */
+    }
+
+    #banner {
+        width: 100%; /* Faz o banner ocupar toda a largura */
+        margin-top: 20px; /* Ajusta a margem superior */
+    }
+
+    #info {
+        flex-direction: column; /* Organiza os itens em coluna */
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .info_2 {
+        width: 100%; /* Ocupa 100% da largura */
+        max-width: none; /* Remove o limite de largura */
+    }
+
+    .info_3 {
+        position: absolute;
+        background-color: var(--color-primary-6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: var(--color-primary-1);
+        width: 50px;
+        height: 50px;
+        right: -8px;
+        top: -8px;
+        border-radius: 0px 50% 0px 50%;
+    }
+
+    #Palestra, #Palestrantes, #tipos_ingresso {
+        padding: 20px; /* Ajusta o padding em telas pequenas */
+    }
+
+    .palestra_2, .Palestrantes_2 {
+        width: 100%; /* Cards ocupam toda a largura */
+        margin-bottom: 20px;
+        max-width: 100%; /* Remove o limite de largura */
+    }
+
+    .Palestrantes_foto img {
+        width: 80px; /* Ajusta o tamanho da foto */
+        height: 80px; /* Mantém a proporção */
+        border-radius: 50%; /* Deixa a imagem redonda */
+        border: 3px solid #4497D8; /* Borda azul */
+    }
+
+    #inscricao .inscricao-container {
+        flex-direction: column; /* Organiza os itens em coluna */
+        gap: 20px;
+        align-items: center;
+        position: relative; /* Evita que o formulário seja sobreposto */
+        z-index: 15; /* Maior prioridade para o formulário */
+    }
+
+    .ingresso {
+        width: 100%; /* Faz os ingressos ocuparem toda a largura */
+        max-width: 300px; /* Limita a largura máxima */
+    }
+
+    .ingresso h4, .ingresso li {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+    }
+
+    input, textarea {
+        position: relative; /* Garantir que o foco nos inputs funcione */
+        z-index: 20; /* Maior z-index para os inputs */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajuste na estrutura do botão mobile */
+    #mobile_btn {
+        font-size: 1.8rem; /* Tamanho maior para o botão do menu */
+        background: none;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+
+    #home {
+        flex-direction: column; /* Empilha o conteúdo */
+        align-items: center;
+    }
+
+    #cta {
+        width: 100%; /* Largura total para a seção */
+        margin-top: 0;
+    }
+
+    #banner {
+        width: 100%; /* Ajusta a largura do banner */
+        margin-top: 20px; /* Ajusta a margem superior */
+    }
+
+    /* Cards com imagem ajustada */
+    .info_2, .palestra_2, .Palestrantes_2 {
+        width: 100%; /* Cards ocupam toda a largura */
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    #tipos_ingresso h3 {
+        font-size: 1.5rem; /* Ajuste do título */
+    }
+
+    .ingresso {
+        width: 100%; /* Cards de ingresso ocupam a largura total */
+        max-width: 300px; /* Limita a largura */
+    }
+
+    .btn-default {
+        padding: 12px 20px; /* Ajuste no tamanho do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar ul {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    #mobile_btn.active + #navbar ul {
+        display: block;
+    }
+}
